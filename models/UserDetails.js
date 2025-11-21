@@ -9,7 +9,11 @@ const UserDetailsSchema = new mongoose.Schema({
   highest_study: String,
   college: String,
   graduation_year: Number,
-  expertise: String
+  expertise: String,
+  joined_date: {
+    type: Date,
+    default: Date.now,
+  }
 });
 
 module.exports = mongoose.model("UserDetails", UserDetailsSchema);

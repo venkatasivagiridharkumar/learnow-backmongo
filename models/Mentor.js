@@ -8,6 +8,11 @@ const MentorSchema = new mongoose.Schema({
   expertise: String,
   experience: String,
   bio: String,
-  linkedin: String
+  linkedin: String,
+  joined_date: {
+    type: Date,
+    default: Date.now,
+  }
 });
+
 module.exports = mongoose.model("Mentor", MentorSchema);
