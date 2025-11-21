@@ -73,9 +73,9 @@ POST http://localhost:3001/add-users
 Content-Type: application/json
 
 {
-  "username":"yash",
-  "password":"Yaswanth@2004",
-  "mentor_username":"charan"
+  "username":"vishnu",
+  "password":"Vishnu@2004",
+  "mentor_username":"yugandhar"
 }
 
 ###
@@ -86,7 +86,7 @@ POST http://localhost:3001/frontend-user-details
 Content-Type: application/json
 
 {
-  "username":"giridhar"
+  "username":"samba"
 }
 
 ###
@@ -94,9 +94,9 @@ POST http://localhost:3001/update-user-details
 Content-Type: application/json
 
 {
-  "username":"giridhar",
-  "full_name":"Venkata siva giridhar kumar",
-  "address":"Badvel Andhra Pradesh",
+  "username":"vishnu",
+  "full_name":"VISHNU PUTTUR",
+  "address":"Mangalam",
   "phone":"+91 9652530489",
   "photo":"https://live.staticflickr.com/65535/54909816004_1366dfddb4_n.jpg",
   "highest_study":"B tech",
@@ -143,5 +143,5 @@ POST http://localhost:3001/frontend-mentor-details
 Content-Type: application/json
 
 {
-  "username":"giridhar"
+  "username":"sudheer"
 }

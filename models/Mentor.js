@@ -8,7 +8,7 @@ const MentorSchema = new mongoose.Schema({
   expertise: String,
   experience: String,
   bio: String,
-  linkedin: String,
+  linkedIn: String,
   joined_date: {
     type: Date,
     default: Date.now,

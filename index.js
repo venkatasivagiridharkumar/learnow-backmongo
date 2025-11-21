@@ -318,8 +318,8 @@ app.post("/update-user-details", async (req, res) => {
 
 app.post("/frontend-update-user-details", async (req, res) => {
   try {
+     const { username } = req.body;
     const {
-      username,
       full_name,
       address,
       phone,
