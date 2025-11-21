@@ -43,13 +43,19 @@ app.get("/mentors-details", async (req, res) => {
 
 app.post("/add-mentor", async (req, res) => {
   try {
-    const mentor = new Mentor(req.body);
+    const mentor = new Mentor({
+      ...req.body,
+      joined_date: new Date(),  
+    });
+
     await mentor.save();
+
     res.status(201).send({ message: "Mentor added successfully" });
   } catch (err) {
     res.status(500).send({ error: err.message });
   }
 });
+
 
 
 
@@ -169,6 +175,7 @@ const exists = await User.findOne({ username });
       college = "",
       graduation_year = 2026,
       expertise = "",
+      joined_date = new Date()
     } = req.body;
 
     await UserDetails.create({
@@ -181,6 +188,7 @@ const exists = await User.findOne({ username });
       college,
       graduation_year,
       expertise,
+      joined_date
     });
 
     res.status(201).send({
@@ -238,8 +246,6 @@ app.post("/frontend-user-details", async (req, res) => {
     res.status(500).send({ error: err.message });
   }
 });
-
-
 
 app.post("/frontend-mentor-details", async (req, res) => {
   try {
